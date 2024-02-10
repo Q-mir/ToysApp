@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             textBox1 = new TextBox();
-            textBox3 = new TextBox();
             dateTimePicker1 = new DateTimePicker();
             numericUpDown1 = new NumericUpDown();
             numericUpDown2 = new NumericUpDown();
@@ -43,6 +42,7 @@
             label6 = new Label();
             label7 = new Label();
             button1 = new Button();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
@@ -54,13 +54,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(236, 23);
             textBox1.TabIndex = 0;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(126, 132);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(236, 23);
-            textBox3.TabIndex = 2;
             // 
             // dateTimePicker1
             // 
@@ -178,11 +171,20 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(126, 132);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(236, 23);
+            comboBox1.TabIndex = 16;
+            // 
             // AddToyForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(374, 475);
+            Controls.Add(comboBox1);
             Controls.Add(button1);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -196,7 +198,6 @@
             Controls.Add(numericUpDown2);
             Controls.Add(numericUpDown1);
             Controls.Add(dateTimePicker1);
-            Controls.Add(textBox3);
             Controls.Add(textBox1);
             Name = "AddToyForm";
             Text = "AddToyForm";
@@ -210,7 +211,6 @@
         #endregion
 
         private TextBox textBox1;
-        private TextBox textBox3;
         private DateTimePicker dateTimePicker1;
         private NumericUpDown numericUpDown1;
         private NumericUpDown numericUpDown2;
@@ -224,5 +224,6 @@
         private Label label6;
         private Label label7;
         private Button button1;
+        private ComboBox comboBox1;
     }
 }

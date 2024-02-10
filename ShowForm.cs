@@ -18,6 +18,7 @@ namespace ToysApp
             _form = form;
             form.Visible = false;
             button1.Enabled = false;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             label9.Text = "Режим просмотра";
             FormClosed += (s, e) => _form.Visible = true;
             if(user.Role)
@@ -69,6 +70,7 @@ namespace ToysApp
 
             };
         }
+        
         private void SortAsc<T>(Func<ToyObj, T> funct)
         {
             _toys = _toys.OrderBy(row => row.Name).ToList();
@@ -117,7 +119,7 @@ namespace ToysApp
             listBox1.Items.Clear();
             foreach (ToyObj toy in _toys)
             {
-                listBox1.Items.Add($"#{toy.Id}:{toy.Name}");
+                listBox1.Items.Add($"# {toy.Id} : {toy.Name}");
             }
         }
         private void button2_Click(object sender, EventArgs e)
