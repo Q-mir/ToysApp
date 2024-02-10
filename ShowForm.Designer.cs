@@ -168,9 +168,8 @@
             label9.AutoSize = true;
             label9.Location = new Point(12, 304);
             label9.Name = "label9";
-            label9.Size = new Size(245, 15);
+            label9.Size = new Size(0, 15);
             label9.TabIndex = 13;
-            label9.Text = "Чтобы удалить, нажите дважды на элемент";
             // 
             // button3
             // 

@@ -9,14 +9,23 @@ namespace ToysApp
     {
 
         private Form _form;
+        private User _user;
         private List<ToyObj> _toys;
-        public ShowForm(Form form)
+        public ShowForm(Form form, User user)
         {
             InitializeComponent();
+            _user = user;
             _form = form;
             form.Visible = false;
+            button1.Enabled = false;
+            label9.Text = "Режим просмотра";
             FormClosed += (s, e) => _form.Visible = true;
-            listBox1.DoubleClick += ListBox1_DoubleClick;
+            if(user.Role)
+            {
+                listBox1.DoubleClick += ListBox1_DoubleClick;
+                button1.Enabled = true;
+                label9.Text = "Чтобы удалить, нажите дважды на элемент";
+            }
             
             
 

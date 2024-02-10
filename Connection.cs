@@ -10,6 +10,7 @@ namespace ToysApp
     public class Connection : DbContext
     {
         public DbSet<ToyObj> Toys { get; set; } = null!;
+        public DbSet<User> Users { get; set; } = null!;
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
